@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vatsal Sharma</title>
+</head>
+<body>
+    <div>
+        <div class="toggle" onclick="openNav(); togglemenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Projects', this, 'green')">Projects</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); togglemenu()">&times;</a>
+  <a href="https://stackoverflow.com/users/14500661/vatsal">StackOverFlow</a>
+  <a href="https://github.com/anotherVatsalSharma">Github</a>
+  <a href="https://www.sololearn.com/profile/19356984">SoloLearn</a>
+  <a href="#"></a>
+</div>
+
+<div id="Home" class="tabcontent">
+  <h1>Welcome To Vatsal Sharma's Portfolio</h1>
+  <div class="aboutme">
+      <div class="image"></div>
+      <div class="infome">
+        <p>Hey there! <br> I'm an aspiring medical student. Coding is a hobby. I'm well-versed with front-end web development and I'm always ready to broaden my horizons.</p> 
+    </div>
+  </div>
+</div>
+
+<div id="Projects" class="tabcontent">
+    <h2>My Projects</h2>
+    <div id="projectsul">
+        <section class="porjectslist">
+	        <ul>
+		        <li><a href="https://anothervatsalsharma.github.io/happyBirthday/">Happy Birthday Animation</a></li><br>
+		        <li><a href="https://anothervatsalsharma.github.io/first3DAnimation/">First 3D Animation</a></li><br>
+                <li><a href="https://anothervatsalsharma.github.io/3DSolarSystem/">3D Solar System</a></li><br>
+	        </ul>
+        </section>
+        <section class="porjectslist">
+	        <ul>
+		        <li><a href="https://anothervatsalsharma.github.io/happyNewYear/">Happy New Year Animation</a></li><br>
+		        <li><a href="https://anothervatsalsharma.github.io/modernCalculator/">Modern Calculator</a></li><br>
+		        <li><a href="https://anothervatsalsharma.github.io/WhatDayWasIt/">What Day Was It</a></li>
+	        </ul>
+        </section>
+    </div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h2>Contact Me</h2>
+  <p>Get in touch through the form, or swing by for a cup of coffee.</p>
+  <p>Address - XX XXXXX XXXX 1100XX</p>
+  <div id="info">
+        <div id="title">
+            
+            <div>
+                <h1>Contact Form</h1>
+            </div>
+            <hr>
+            <div>
+                <p>Write your message below. I'll reply in 2-3 working Days</p>
+            </div>
+        
+        </div>
+    
+        <div id="namediv">
+            <div>
+                <label for="name">Name</label> 
+            </div>
+            <hr>
+            <div>
+                <input type="text" placeholder="Enter Your name" id="name" required>
+            </div>
+        </div>
+        <div id="emailiddiv">
+            <div>
+                <label for="emailid">Email ID</label>
+            </div>
+            <hr>
+            <div>
+                <input type="email" placeholder="Enter Your Email ID" id="emailid" required>
+            </div>
+            
+
+        </div>
+
+        <div id="messagediv">
+            <div>
+                <label for="name">Message</label> 
+            </div>
+            <hr>
+            <div>
+                <input type="text" placeholder="Enter Your MESSAGE" id="name" required>
+            </div>
+        </div>
+    </div>
+    <div id="submit">
+            <div> 
+                <input type="submit" value="Submit"     placeholder="Submit"> 
+            </div>
+    </div>
+    
+</div>
+
+    <script>
+function togglemenu() {
+    var x = document.getElementsByClassName('.toggle');
+  x.classList.toggle("change");
+}
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
